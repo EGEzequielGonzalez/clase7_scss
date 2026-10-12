@@ -3,13 +3,13 @@
   "name": "clase7_scss",
   "version": "1.0.0",
   "description": "Entrega 7 - Arquitectura SCSS y refactorización completa de Código Café",
-  "homepage": "https://github.com/EGEzequielGonzalez/clase_7_scss#readme",
+  "homepage": "https://github.com/EGEzequielGonzalez/clase7_scss#readme",
   "bugs": {
-    "url": "https://github.com/EGEzequielGonzalez/clase_7_scss/issues"
+    "url": "https://github.com/EGEzequielGonzalez/clase7_scss/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EGEzequielGonzalez/clase_7_scss.git"
+    "url": "git+https://github.com/EGEzequielGonzalez/clase7_scss.git"
   },
   "license": "ISC",
   "author": "",
