@@ -21,10 +21,10 @@ a {
 
 img {
     max-width: 100%;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
-/* CSS Tipografía */
+/* CSS Tipografías */
 .title {
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
