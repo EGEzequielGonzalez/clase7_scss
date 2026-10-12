@@ -5,6 +5,11 @@ $color-hero: rgb(109, 29, 29);
 $color-boton: rgb(233, 18, 18);
 $color-tarjetas: rgb(255, 212, 184);
 $color-hover: rgba(253, 33, 33, 0.342);
+$color-texto: rgb(165, 42, 42);
+$color-texto-secundario: rgb(130, 83, 66);
+$color-borde: rgb(199, 155, 127);
+$color-boton-hover: rgb(236, 95, 95);
+$color-blanco: white;
 
 // Fuente
 $fuente: "Montserrat", sans-serif;
@@ -14,3 +19,11 @@ $fondo-barras: url("../img/fondo-granos.png");
 
 // Sombreado
 $sombra: 5px 5px 10px rgb(109, 29, 29);
+
+// Bordes
+$radio-borde: 5px;
+$radio-imagen: 4px;
+
+// Breakpoints
+$tablet: 768px;
+$desktop: 1024px;

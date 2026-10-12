@@ -1,0 +1,57 @@
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+
+.contacto-formulario {
+    background-color: $color-tarjetas;
+    border-radius: $radio-borde;
+    padding: 1.5rem;
+    @include flex(column, null, null, 1rem);
+
+    fieldset {
+        border: none;
+    }
+
+    legend {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 0.7rem;
+        border: 1px solid $color-borde;
+        border-radius: $radio-borde;
+        font-family: $fuente;
+
+        &:focus {
+            outline: 2px solid $color-oscuro;
+            outline-offset: 2px;
+        }
+    }
+
+    textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+}
+
+.contacto-campos {
+    @include grid(1fr, null, null, 0.5rem);
+}
+
+// Vista de tablet
+@include tablet {
+    .contacto-formulario {
+        padding: 1.5rem;
+    }
+}
+
+// Vista de escritorio
+@include escritorio {
+    .contacto-formulario {
+        padding: 2rem;
+    }
+}

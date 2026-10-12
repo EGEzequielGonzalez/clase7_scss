@@ -1,0 +1,15 @@
+
+@use "../utilities/variables" as *;
+
+.contacto-formulario button {
+    background-color: $color-oscuro;
+    color: $color-blanco;
+    border: none;
+    border-radius: $radio-borde;
+    padding: 0.8rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-texto;
+    }
+}

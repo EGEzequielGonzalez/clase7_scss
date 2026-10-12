@@ -16,6 +16,13 @@
     gap: $gap;
 }
 
+// Vista de Tablet
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
 // Vista de Escritorio
 @mixin escritorio {
     @media (min-width: 1024px) {

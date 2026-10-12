@@ -1,5 +1,5 @@
+
 @use "../utilities/variables" as *;
-@use "../utilities/extend" as *;
 @use "../utilities/mixin" as *;
 
 main {
@@ -15,8 +15,8 @@ main {
         @include flex(column, space-around, center, 0.8rem);
         padding: 1rem;
         width: 100%;
-        border-radius: 5px;
-    
+        border-radius: $radio-borde;
+
         h2 {
             font-size: 1.8rem;
         }
@@ -25,8 +25,31 @@ main {
             color: $color-claro;
             background-color: $color-boton;
             padding: 1rem;
-            border-radius: 5px;
+            border-radius: $radio-borde;
             transition: all 0.5s;
+
+            &:visited {
+                color: $color-tarjetas;
+            }
+
+            &:hover {
+                background-color: $color-boton-hover;
+            }
+
+            &:active {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// Vista de escritorio
+@include escritorio {
+    main {
+        padding: 0;
+
+        .hero {
+            width: auto;
         }
     }
 }

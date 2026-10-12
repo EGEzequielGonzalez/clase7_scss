@@ -1,0 +1,147 @@
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+
+.nosotros-intro {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+
+    p {
+        margin-top: 1rem;
+    }
+}
+
+.nosotros-historia {
+    width: 100%;
+    padding: 1rem;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.nosotros-contenedor {
+    @include grid(1fr, null, null, 1.5rem);
+    background-color: $color-tarjetas;
+    padding: 1rem;
+    border-radius: $radio-borde;
+
+    figure {
+        margin: 0;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    figcaption {
+        color: $color-texto-secundario;
+        font-size: 0.9rem;
+        font-style: italic;
+        text-align: center;
+        padding: 0.8rem;
+        border-bottom: 1px solid $color-borde;
+    }
+}
+
+.nosotros-texto {
+    padding: 0.5rem;
+
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+.nosotros-valores {
+    width: 100%;
+    padding: 1rem;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    ul {
+        @include grid(1fr, null, null, 1rem);
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        background-color: $color-tarjetas;
+        padding: 1.5rem;
+        border-radius: $radio-borde;
+        text-align: center;
+    }
+}
+
+// Vista de tablet
+@include tablet {
+    .nosotros-historia {
+        max-width: 1000px;
+    }
+
+    .nosotros-contenedor {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+
+        img {
+            height: 280px;
+        }
+    }
+
+    .nosotros-valores {
+        max-width: 900px;
+
+        ul {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+// Vista de escritorio
+@include escritorio {
+    .nosotros-intro {
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    .nosotros-historia {
+        width: 90%;
+        max-width: 1300px;
+    }
+
+    .nosotros-contenedor {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 2rem;
+
+        img {
+            height: 350px;
+        }
+    }
+
+    .nosotros-texto {
+        align-self: center;
+    }
+
+    .nosotros-valores {
+        width: 90%;
+        max-width: 1200px;
+
+        ul {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}

@@ -4,36 +4,77 @@
 
 // Mobile first
 .galeria {
-    @include grid( 1fr, null, null, 1rem);
+    @include grid(1fr, null, null, 1rem);
     width: 100%;
     padding: 0 1rem;
+
+    figure {
+        margin: 0;
+        overflow: hidden;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        display: block;
+        object-fit: cover;
+    }
+
+    figcaption {
+        font-weight: 500;
+        font-style: normal;
+        font-size: 18px;
+        padding: 0.8rem;
+        text-align: center;
+    }
 }
 
 .escritorio {
     display: none;
 }
 
-.galeria figure {
-    margin: 0;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: 1fr auto;
-}
+// Vista de tablet
+@include tablet {
+    .movil {
+        display: none;
+    }
 
-.galeria img {
-    width: 100%;
-    height: 100%;
-    min-height: 0;
-    display: block;
-    object-fit: cover;
-}
+    .escritorio {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
 
-.galeria figcaption {
-    font-weight: 500;
-    font-style: normal;
-    font-size: 18px;   
-    padding: 0.8rem;
-    text-align: center;
+    .galeria {
+        width: 90%;
+        max-width: 900px;
+
+        @include grid(
+            1fr 1fr,
+            250px 250px,
+            "cuadrada-1 vertical" "cuadrada-2 horizontal",
+            null
+        );
+    }
+
+    .foto-vertical {
+        grid-area: vertical;
+    }
+
+    .foto-cuadrada-1 {
+        grid-area: cuadrada-1;
+    }
+
+    .foto-cuadrada-2 {
+        grid-area: cuadrada-2;
+    }
+
+    .foto-horizontal {
+        grid-area: horizontal;
+    }
 }
 
 // Vista de escritorio
@@ -51,11 +92,11 @@
     .galeria {
         width: 80%;
         max-width: 1000px;
-        @include grid (1fr 1fr, 280px 280px 280px, "vertical cuadrada-1" "vertical cuadrada-2" "horizontal horizontal", null)
+        @include grid (1fr 1fr, 280px 280px 280px, "vertical cuadrada-1" "vertical cuadrada-2" "horizontal horizontal", null);
     }
 
     .galeria figure:focus {
-        box-shadow: 5px 5px 10px rgb(109, 29, 29);
+        box-shadow: $sombra;
     }
 
     .foto-vertical {
